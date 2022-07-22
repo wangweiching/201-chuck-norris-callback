@@ -5,16 +5,32 @@ import dash_html_components as html
 import os
 
 ###### Set up variables
-list_of_choices=['forhand', 'backhand', 'slice', 'volley', 'serve']
-githublink = 'https://github.com/austinlasseter/chuck_norris_execution'
-image1='chucknorris.jpg'
-heading1='Chuck Norris execution method'
+list_of_choices=[
+    {
+        "label": "forehand",
+        "demo": "https://images.squarespace-cdn.com/content/v1/5d9d0c165b67224fffdc025b/1577819405443-PNFCD3IN17E38MTSKTEC/image-asset.gif"
+    },
+    {
+        "label":"backhand",
+        "demo": "https://images.squarespace-cdn.com/content/v1/5d9d0c165b67224fffdc025b/1577901915805-G6NLJ636A7MACNUQQFGE/ezgif.com-optimize+%284%29.gif"
+    },
+    {
+        "label": "slice",
+        "demo": "https://images.squarespace-cdn.com/content/v1/5d9d0c165b67224fffdc025b/1577904057399-G4JOA4HUAL57OSCL03CG/ezgif.com-optimize+%286%29.gif"
+    },
+    {
+        "label": "volley",
+        "demo": "https://images.squarespace-cdn.com/content/v1/5d9d0c165b67224fffdc025b/1577909204949-W44BX73Y6ULGHOY9VAXG/ezgif.com-optimize+%287%29.gif"
+    }
+]
+githublink = 'https://github.com/wangweiching/201-chuck-norris-callback'
+heading1='Tennis basic strokes'
 
 ########### Initiate the app
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
-app.title='Chuck'
+app.title='Learn Tennis'
 
 ####### Layout of the app ########
 app.layout = html.Div([
@@ -33,11 +49,12 @@ app.layout = html.Div([
 
 
 ######### Interactive callbacks go here #########
-@app.callback(dash.dependencies.Output('your-output-here', 'children'),
-              [dash.dependencies.Input('your-input-here', 'value')])
-def display_value(whatever_you_chose):
-    return f'Chuck Norris will now execute you with a {whatever_you_chose}.'
-
+@app.callback([Output('your-output-here', 'children'), Output('demo', 'src')],
+              [Input('your-input-here', 'value')])
+def display_value(choice_idx):
+    label = list_of_choices[choice_idx]["label"]
+    demo = list_of_choices[choice_idx]["demo"]
+    return f'I can execute you with a {label}.', demo
 
 ######### Run the app #########
 if __name__ == '__main__':
