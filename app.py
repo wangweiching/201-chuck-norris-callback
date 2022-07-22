@@ -5,7 +5,7 @@ import dash_html_components as html
 import os
 
 ###### Set up variables
-list_of_choices=['punch', 'body-slam', 'round-house kick to the face']
+list_of_choices=['forhand', 'backhand', 'slice', 'volley', 'serve']
 githublink = 'https://github.com/austinlasseter/chuck_norris_execution'
 image1='chucknorris.jpg'
 heading1='Chuck Norris execution method'
