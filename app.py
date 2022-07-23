@@ -1,7 +1,8 @@
 ######### Import your libraries #######
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from dash import html
+from dash.dependencies import Input, Output, State
 import os
 
 ###### Set up variables
@@ -35,7 +36,6 @@ app.title='Learn Tennis'
 ####### Layout of the app ########
 app.layout = html.Div([
     html.H2(heading1),
-    html.Img(src=app.get_asset_url(image1), style={'width': 'auto', 'height': '10%'}),
     dcc.Dropdown(id='your-input-here',
                 options=[{'label': i, 'value': i} for i in list_of_choices],
                 value='punch',
