@@ -9,19 +9,19 @@ import os
 list_of_choices=[
     {
         "label": "forehand",
-        "demo": "https://images.squarespace-cdn.com/content/v1/5d9d0c165b67224fffdc025b/1577819405443-PNFCD3IN17E38MTSKTEC/image-asset.gif"
+        "demo": "https://media.giphy.com/media/d91znKMfav9mre2TlC/giphy.gif"
     },
     {
         "label":"backhand",
-        "demo": "https://images.squarespace-cdn.com/content/v1/5d9d0c165b67224fffdc025b/1577901915805-G6NLJ636A7MACNUQQFGE/ezgif.com-optimize+%284%29.gif"
+        "demo": "https://media.giphy.com/media/4Nvg2jmFkhZr0Gngjk/giphy.gif"
     },
     {
         "label": "slice",
-        "demo": "https://images.squarespace-cdn.com/content/v1/5d9d0c165b67224fffdc025b/1577904057399-G4JOA4HUAL57OSCL03CG/ezgif.com-optimize+%286%29.gif"
+        "demo": "https://media.giphy.com/media/9Dxgzo7hRUAWHSQO0e/giphy-downsized-large.gif"
     },
     {
         "label": "volley",
-        "demo": "https://images.squarespace-cdn.com/content/v1/5d9d0c165b67224fffdc025b/1577909204949-W44BX73Y6ULGHOY9VAXG/ezgif.com-optimize+%287%29.gif"
+        "demo": "https://media.giphy.com/media/vhuQyyEfDbVPedVyYk/giphy.gif"
     }
 ]
 githublink = 'https://github.com/wangweiching/201-chuck-norris-callback'
