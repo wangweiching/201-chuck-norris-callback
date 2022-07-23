@@ -36,12 +36,17 @@ app.title='Learn Tennis'
 ####### Layout of the app ########
 app.layout = html.Div([
     html.H2(heading1),
+    # dcc.Dropdown(id='your-input-here',
+    #             options=[{'label': i, 'value': i} for i in list_of_choices],
+    #             value='punch',
+    #             style={'width': '500px'}),
     dcc.Dropdown(id='your-input-here',
-                options=[{'label': i, 'value': i} for i in list_of_choices],
-                value='punch',
-                style={'width': '500px'}),
+            options=[{'label': i["label"], 'value': idx} for idx,i in enumerate(list_of_choices)],
+            value=0,
+            style={'width': '500px'}),
     html.Br(),
     html.Div(id='your-output-here', children=''),
+    html.Iframe(src='', style={'width': '300', 'height':'200'}, id='demo'),
     html.Br(),
     html.A('Code on Github', href=githublink),
 
